@@ -46,39 +46,46 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
-.app-wrapper
+<style scoped>
+.app-wrapper {
   position: relative;
   height: 100%;
   width: 100%;
-  .app-main
-    position: absolute
-    display: flex
-    flex-direction: row
-    justify-content: flex-end
-    transition: all .3s ease;
-    left: 210px
-    top: 0
-    right: 0
-    height: 2000px
-    z-index: 1
+}
 
-.active
+.app-wrapper  .app-main {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  transition: all .3s ease;
+  left: 210px;
+  top: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 1;
+}
+
+.active {
   width: 100%;
-  .app-main
-    position: absolute
-    display: flex
-    flex-direction: row
-    justify-content: flex-end
-    transition: all .3s ease;
-    left: 64px
-    top: 0
-    right: 0
-    height: 2000px
-    z-index: 1
+}
 
-.app-wrapper:after
-  content: ""
-  display: block
-  clear: both
+.active .app-main {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  transition: all .3s ease;
+  left: 64px;
+  top: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 1;
+}
+
+.app-wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 </style>

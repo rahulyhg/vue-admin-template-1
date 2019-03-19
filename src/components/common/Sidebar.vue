@@ -63,48 +63,54 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
-  .sidebar-container >>> .el-submenu__title, .el-menu-item
-    color: #fff
-    border: 0
-    text-align: left
-    transition: all 0s ease
+<style scoped>
+.sidebar-container >>> .el-submenu__title, .el-menu-item {
+  color: #fff;
+  border: 0;
+  text-align: left;
+  transition: all 0s ease;
+}
 
-  .sidebar-container >>> .el-menu-vertical-demo.el-menu--collapse.el-menu, .el-menu
-    border: 0
-    transition: all 0s ease
+.sidebar-container >>> .el-menu-vertical-demo.el-menu--collapse.el-menu, .el-menu {
+  border: 0;
+  transition: all 0s ease;
+}
 
-  .sidebar-container
-    background: rgb(48, 65, 86)
-    position: fixed
-    width: 210px
-    overflow: hidden
-    top: 0
-    left: 0
-    bottom: 0
-    z-index: 2
-    transition: all .3s ease
-    .sidebar-logo
-      overflow: hidden
-      background: #09c
-      height: 60px
-      width: 100%
-      line-height: 60px
-      color: #fff
-      font-size: 18px
-      font-weight: 600
-  .el-menu-vertical-demo:not(.el-menu--collapse)
-    width: 100%;
-    min-height: 400px;
-    text-color: #fff
-    color: #fff
-    active-text-color: #fff
+.sidebar-container {
+  background: rgb(48, 65, 86);
+  position: fixed;
+  width: 210px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all .3s ease;
+}
 
-  .active .sidebar-container
-    background: rgb(48, 65, 86)
-    position: fixed
-    width: 64px
-    overflow: hidden
-    z-index: 2
-    transition: all .3s ease
+.sidebar-container .sidebar-logo {
+  overflow: hidden;
+  background: #09c;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 100%;
+  min-height: 400px;
+  color: #fff;
+}
+
+.active .sidebar-container {
+  background: rgb(48, 65, 86);
+  position: fixed;
+  width: 64px;
+  overflow: hidden;
+  z-index: 2;
+  transition: all .3s ease;
+}
 </style>

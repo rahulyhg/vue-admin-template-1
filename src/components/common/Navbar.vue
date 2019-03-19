@@ -97,94 +97,116 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
-.navbar-container
-  background-color: #09c
-  position: fixed
-  height: 60px
-  flex: 1
-  top: 0
-  left: 210px
-  right: 0
-  transition: all .3s ease
-  z-index: 2
+<style scoped>
+.navbar-container {
+  background-color: #09c;
+  position: fixed;
+  height: 60px;
+  flex: 1;
+  top: 0;
+  left: 210px;
+  right: 0;
+  transition: all .3s ease;
+  z-index: 2;
+}
 
-.active .navbar-container
-  background-color: #09c
-  position: fixed
-  height: 60px
-  flex: 1
-  top: 0
-  left: 64px
-  transition: all .2s ease
-  right: 0
-  z-index: 2
+.active .navbar-container {
+  background-color: #09c;
+  position: fixed;
+  height: 60px;
+  flex: 1;
+  top: 0;
+  left: 64px;
+  transition: all .2s ease;
+  right: 0;
+  z-index: 2;
+}
 
-.el-header
-  background-color: #09c
-  color: #fff
-  line-height: 60px
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: flex-end
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04)
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04)
-  .sidebar-close
-    width: 60px
-    text-align: left
-    font-size: 18px
-    transition: all .3s ease-in-out
-    &:hover
-      color: #eee
-  .content
-    flex: 1
-  .userinfo
-    width: 120px
-    height: 60px
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: flex-end
-    background: rgba(0, 0, 0, .05)
-    padding-right: 20px
-    .img-wrapper
-      width: 40px
-      height: 60px
-      line-height: 60px
-      display: flex
-      flex-direction: column
-      justify-content: center
-      text-align: center
-      align-items: center
-      .userimage
-        height: 32px
-        width: 32px
-        border-radius: 50%
-        border-style: none
-        background-image: url('/static/images/user.jpg')
-        background-repeat: no-repeat
-        background-size: 100%
-        -moz-background-size: 100%
-        display: inline-block
-    .userdetail
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      line-height: 20px
-      color: #fff
-      font-size: 12px
-      .job
-        font-weight: 600
-  .message, .notify
-    width: 50px
-    line-height: 60px
-    display: flex
-    text-align: left
-    align-items: center
-    justify-content: center
+.el-header {
+  background-color: #09c;
+  color: #fff;
+  line-height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
+}
 
-.el-dropdown-menu, .el-dropdown-item
-    width: 140px
+.el-header .sidebar-close {
+  width: 60px;
+  text-align: left;
+  font-size: 18px;
+  transition: all .3s ease-in-out;
+}
+
+.el-header .sidebar-close:hover {
+  color: #eee;
+}
+
+.el-header .content {
+  flex: 1;
+}
+
+.el-header .userinfo {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, .05);
+  padding-right: 20px;
+}
+
+.userinfo .img-wrapper {
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.img-wrapper .userimage {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border-style: none;
+  background-image: url('/static/images/user.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
+  display: inline-block;
+}
+
+.userinfo .userdetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.userdetail .job {
+  font-weight: 600;
+}
+
+.message, .notify {
+  width: 50px;
+  line-height: 60px;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+}
+
+.el-dropdown-menu, .el-dropdown-item {
+  width: 140px;
+}
 </style>

@@ -2,18 +2,18 @@
   <div class="sidebar-container" ref="sidebar">
     <div v-if="isCollapse" class="sidebar-logo">V</div>
     <div v-else class="sidebar-logo">Vue Admin Template</div>
-    <el-menu class="el-menu-vertical-demo" rel='122' @open="handleOpen" @close="handleClose" :collapse="Collapse" background-color="#304156" text-color="#fff">
-      <el-submenu index="1" rel='123'>
-        <template slot="title" rel='124'>
+    <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse" background-color="#304156" text-color="#fff">
+      <el-submenu index="1">
+        <template slot="title">
           <i class="el-icon-location"></i>
           <span slot="title">导航一</span>
         </template>
           <el-menu-item index="1-1">选项1</el-menu-item>
           <el-menu-item index="1-2">选项2</el-menu-item>
           <el-menu-item index="1-3">选项3</el-menu-item>
-        <el-submenu index="1-4" rel="125" style="background-color: rgb(48, 65, 86);">
-          <span slot="title" rel="127">选项4</span>
-          <el-menu-item index="1-4-1" rel="126">选项1</el-menu-item>
+        <el-submenu index="1-4">
+          <span slot="title">选项4</span>
+          <el-menu-item index="1-4-1">选项1</el-menu-item>
         </el-submenu>
       </el-submenu>
       <el-menu-item index="2">
@@ -35,12 +35,7 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-  name: 'Sidebar',
-  data () {
-    return {
-      Collapse: false
-    }
-  },
+  name: 'PageSidebar',
   computed: {
     ...mapState({
       isCollapse: 'isCollapse'
@@ -52,11 +47,6 @@ export default {
     },
     handleClose (key, keyPath) {
       console.log('close', key, keyPath)
-    }
-  },
-  watch: {
-    isCollapse () {
-      this.Collapse = this.isCollapse
     }
   }
 }

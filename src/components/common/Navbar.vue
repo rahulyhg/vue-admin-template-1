@@ -52,7 +52,7 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 export default {
-  name: 'Navbar',
+  name: 'PageNavbar',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

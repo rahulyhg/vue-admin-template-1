@@ -7,10 +7,5 @@ export default {
   },
   changeCollapseSwitch (state, status) {
     state.isCollapse = status
-    try {
-      localStorage.isCollapse = status
-    } catch (e) {
-      console.log(e)
-    }
   }
 }

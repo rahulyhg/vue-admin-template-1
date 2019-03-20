@@ -1,22 +1,24 @@
 <template>
   <el-container class="app-wrapper" :class="{active: isCollapse}">
-      <sidebar/>
+      <page-sidebar/>
       <div class="app-main is-vertical">
-        <navbar/>
-        <!-- <page-main></page-main> -->
+        <page-navbar/>
+        <page-content/>
       </div>
   </el-container>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import Sidebar from '@/components/common/Sidebar'
-import Navbar from '@/components/common/Navbar'
+import PageSidebar from '@/components/common/Sidebar'
+import PageNavbar from '@/components/common/Navbar'
+import PageContent from '@/components/common/Content'
 export default {
   name: 'Home',
   components: {
-    Sidebar,
-    Navbar
+    PageSidebar,
+    PageNavbar,
+    PageContent
   },
   computed: {
     ...mapState({
